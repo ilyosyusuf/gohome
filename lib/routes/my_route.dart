@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:gohome/screens/home/home_page.dart';
+import 'package:gohome/screens/home/view/home_page.dart';
+import 'package:gohome/screens/onboarding/onboarding_page.dart';
 
 class MyRoute {
   static final MyRoute _instance = MyRoute._init();
@@ -11,6 +12,8 @@ class MyRoute {
     switch (settings.name) {
       case '/home':
         return _pages(HomePage());
+            case '/onboarding':
+        return _pages(OnBoardingPAge());
       default:
     }
   }
