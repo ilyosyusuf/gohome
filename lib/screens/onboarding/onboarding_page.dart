@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:gohome/core/constants/colors.dart';
 import 'package:gohome/core/extensions/context_extension.dart';
 import 'package:gohome/screens/widgets/elevated_button_widget.dart';
+import 'package:gohome/screens/widgets/text_widget.dart';
 
 class OnBoardingPAge extends StatelessWidget {
   const OnBoardingPAge({Key? key}) : super(key: key);
@@ -22,13 +23,7 @@ class OnBoardingPAge extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text(
-                "onboardinglets".tr(),
-                style: TextStyle(
-                    fontSize: 40,
-                    fontWeight: FontWeight.w600,
-                    color: ColorConst.kBottomNavigationColor),
-              ),
+              TextWidget.textWidget(text: "onboardinglets".tr(), size: 40, fontWeight: FontWeight.w600, color: ColorConst.kBottomNavigationColor),
               const Spacer(),
               MyElevatedButton(
                 onPressed: () {

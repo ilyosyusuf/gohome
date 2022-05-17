@@ -26,10 +26,11 @@ class MorePopularPlacesWidget extends StatelessWidget {
               child: Container(
                 width: context.width * 0.25,
                 height: context.height,
-                decoration: WithoutShadowDecoration.decorate(
-                  Colors.yellow,
-                  image_url,
-                ),
+                child: ClipRRect(borderRadius: BorderRadius.circular(15.0),child: FadeInImage(fit: BoxFit.cover,placeholder: AssetImage('assets/images/loadingg.gif'), image: NetworkImage(image_url))),
+                // decoration: WithoutShadowDecoration.decorate(
+                //   Colors.yellow,
+                //   image_url,
+                // ),
               ),
             ),
             Column(

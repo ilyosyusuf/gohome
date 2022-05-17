@@ -34,9 +34,9 @@ class NearPlaceWidget extends StatelessWidget {
           Expanded(
               flex: 6,
               child: Container(
-                  decoration: BoxOnlyDecoration.top(
-                      Colors.yellow,
-                      image_url),),),
+                width: context.width,
+                child: ClipRRect(borderRadius: BorderRadius.only(topLeft: Radius.circular(15), topRight: Radius.circular(15)),child: FadeInImage(fit: BoxFit.cover,placeholder: AssetImage('assets/images/loadingg.gif'), image: NetworkImage(image_url))),
+          )),
           Expanded(
             flex: 4,
             child: Container(

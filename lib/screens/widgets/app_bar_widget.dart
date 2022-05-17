@@ -96,7 +96,9 @@ class _AppBarWidgetState extends State<AppBarWidget> {
               children: [
                 Expanded(
                   child: TextFormField(
-                    onChanged: (v) {},
+                    onChanged: (v) {
+                      context.read<HomeCubit>().search(v);
+                    },
                     decoration: InputDecoration(
                       hintText: "lookingfor".tr(),
                       hintStyle: const TextStyle(color: Colors.grey),
